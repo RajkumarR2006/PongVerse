@@ -85,21 +85,23 @@ PongVerse/ │
 If you want to host Pong Verse on your local or cloud server:
 
 ### Step 1: Install and Start Nginx
-```bash
+```bash `
 sudo apt update
 sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
+` ``` `
 
 ### Step 2: Copy Files
-```bash
+```bash `
 sudo mkdir -p /var/www/pongverse
 sudo cp -r * /var/www/pongverse/
 sudo chown -R www-data:www-data /var/www/pongverse
 sudo chmod -R 755 /var/www/pongverse
+` ``` `
 
 ### Step 3:Configure the site
-```bash
+```bash `
 sudo nano /etc/nginx/sites-available/pongverse
 server {
     listen 80;
@@ -111,14 +113,14 @@ server {
         try_files $uri $uri/ =404;
     }
 }
-
+` ``` `
 ### Step 4:Enable and Restart
-```bash
+```bash `
 sudo ln -s /etc/nginx/sites-available/pongverse /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl restart nginx
-
+` ``` `
 ##🧭 Future Improvements
 
 🎵 Add background music and sound effects
