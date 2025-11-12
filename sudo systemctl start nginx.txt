@@ -1,0 +1,24 @@
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo mkdir -p /var/www/mywebsite
+sudo cp -r (path)/* /var/www/mywebsite/
+sudo chown -R www-data:www-data /var/www/mywebsite
+sudo chmod -R 755 /var/www/mywebsite
+sudo nano /etc/nginx/sites-available/mywebsite
+server {
+    listen 80;
+    server_name mywebsite.local;
+
+    root /var/www/mywebsite;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+######Save and exit (Ctrl + X, then Y, then Enter).
+sudo ln -s /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/default
+sudo nginx -t
+sudo systemctl restart nginx
+
