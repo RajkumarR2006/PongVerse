@@ -1,7 +1,5 @@
 # 🕹️ Pong Verse
 
-![Logo](logo.png)
-
 ### 🚀 A futuristic twist on the classic Pong arcade game
 
 Pong Verse reimagines the nostalgic Pong experience into a visually rich, web-based environment where retro meets modern design. Built with **HTML, CSS, and JavaScript**, the game offers a clean UI, dynamic animations, and both CPU and multiplayer modes.
