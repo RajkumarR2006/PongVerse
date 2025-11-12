@@ -41,18 +41,7 @@ This project helps beginners understand:
 ---
 
 ## 🗂️ Project Structure
-PongVerse/
-│
-├── index.html # Landing page
-├── i2.html # Game screen
-├── gamedep.css # Stylesheet
-├── icon.webp # Icon
-├── logo.png # Logo
-├── video.mp4 # Background video
-│
-├── js/ # JavaScript logic (if any)
-└── deploy/
-└── nginx_setup.txt # Server deployment notes
+<pre> ``` PongVerse/ │ ├── index.html # Landing page ├── i2.html # Game screen ├── gamedep.css # Stylesheet ├── icon.webp # Icon ├── logo.png # Logo ├── video.mp4 # Background video │ ├── js/ # JavaScript logic (if any) └── deploy/ └── nginx_setup.txt # Server deployment notes ``` </pre>
 
 
 ---
@@ -85,15 +74,18 @@ PongVerse/
 If you want to host Pong Verse on your local or cloud server:
 
 ### Step 1: Install and Start Nginx
-```bash
 sudo apt update
 sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
+
+### Step 2: Copy Files
 sudo mkdir -p /var/www/pongverse
 sudo cp -r * /var/www/pongverse/
 sudo chown -R www-data:www-data /var/www/pongverse
 sudo chmod -R 755 /var/www/pongverse
+
+### Step 3:Configure the site
 sudo nano /etc/nginx/sites-available/pongverse
 server {
     listen 80;
@@ -105,11 +97,14 @@ server {
         try_files $uri $uri/ =404;
     }
 }
+
+### Step 4:Enable and Restart
 sudo ln -s /etc/nginx/sites-available/pongverse /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl restart nginx
-🧭 Future Improvements
+
+##🧭 Future Improvements
 
 🎵 Add background music and sound effects
 
@@ -119,7 +114,7 @@ sudo systemctl restart nginx
 
 🧮 Display live score and winner message
 
-🪪 License
+##🪪 License
 
 MIT License © 2025 Raj Kumar R
 
