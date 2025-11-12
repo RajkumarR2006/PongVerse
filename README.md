@@ -41,7 +41,18 @@ This project helps beginners understand:
 ---
 
 ## 🗂️ Project Structure
-<pre> ``` PongVerse/ │ ├── index.html # Landing page ├── i2.html # Game screen ├── gamedep.css # Stylesheet ├── icon.webp # Icon ├── logo.png # Logo ├── video.mp4 # Background video │ ├── js/ # JavaScript logic (if any) └── deploy/ └── nginx_setup.txt # Server deployment notes ``` </pre>
+<pre> ```
+PongVerse/ │
+├── index.html # Landing page 
+|── i2.html # Game screen 
+├── gamedep.css # Stylesheet 
+├── icon.webp # Icon 
+├── logo.png # Logo 
+├── video.mp4 # Background video │ 
+├── js/ # JavaScript logic (if any) 
+   └── deploy/ 
+      └── nginx_setup.txt # Server deployment notes ```
+</pre>
 
 
 ---
